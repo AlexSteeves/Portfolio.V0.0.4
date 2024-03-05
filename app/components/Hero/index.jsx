@@ -20,9 +20,9 @@ export default function index() {
         <motion.div  style={{opacity: opacity}}>
         <Image src={Image1} className={styles.image} fill alt='image'/>
         <div className={styles.text}>
-          <h1>WELCOME, I'M</h1>
-          <h1 className = {styles.name}>ALEX STEEVES</h1>
-          <h3>Software developer and Computer Engineering Graduate</h3>
+          <h2>WELCOME, I'M</h2>
+          <h2 className = {styles.name}>ALEX STEEVES</h2>
+          <h5>Software developer and Computer Engineering Graduate</h5>
         </div>
         </motion.div>
         

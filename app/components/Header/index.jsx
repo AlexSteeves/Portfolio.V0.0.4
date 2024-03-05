@@ -10,9 +10,9 @@ export default function index(){
     return(
         <main className = {styles.container}>
            
-            <h3>
+            <h5>
                 Alex Steeves
-            </h3>
+            </h5>
     
 
 

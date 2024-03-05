@@ -1,5 +1,6 @@
 "use client";
 
+import { Metadata } from 'next'
 import Image from "next/image";
 import styles from "./style.module.scss";
 import Hero from "./components/Hero";
@@ -8,7 +9,7 @@ import { useEffect, useState, useRef } from "react";
 import { AnimatePresence } from "framer-motion";
 import About from "./components/About";
 import Preloader from "./components/PreLoader";
-import { ThemeProvider} from './context/ThemeContext'
+
 import Footer from "./components/Footer";
 import Clarify from './pages/clarify'
 import DropDownContianer from './components/DropDownContainer'
@@ -18,14 +19,6 @@ export default function Home() {
   
   const [isLoading, setIsLoading] = useState(true);
 
-
-  const toggleTheme = () => {
-    if (document.documentElement.classList.contains("dark")) {
-      document.documentElement.classList.remove("dark");
-    } else {
-      document.documentElement.classList.add("dark");
-    }
-  };
 
 
   useEffect(() => {
@@ -45,7 +38,7 @@ export default function Home() {
   
   return (
   
-    <ThemeProvider>
+  
     <main className={styles.container}>
      
      <AnimatePresence mode="wait">
@@ -62,8 +55,7 @@ export default function Home() {
 
     
 
-    </ThemeProvider>
-  
+
 
 
   );

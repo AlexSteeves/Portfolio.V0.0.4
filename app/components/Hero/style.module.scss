@@ -18,22 +18,21 @@
       justify-content: center;
       align-items: left;
       flex-direction: column;
-
-      h1{
-        
-        z-index:50;
+    
+      h2{
         color: white;
-      
-        
+        z-index: 50;
       }
+      h5{
+        color: white;
+        z-index: 50;
+      }
+
+     
       .name{
         margin-left: 5%;
       }
-      h3{
-        z-index: 50;
-        color: white;
-
-      }
+      
     }
 
     .image {

@@ -1,50 +1,37 @@
 :root {
-  /* Color Palette */
+
   --primary-color: #97B100;
   --secondary-color: #A8DADC;
   --accent-color: #FF6B6B;
-  --background-color: #F3ECE0;
+  --background-color: #35374B;
   --text-color: #333333;
 
-  /* Typography */
+
   --ff: "Helvetica Neue", Arial, sans-serif; /* Ensure fallback fonts */
-  --fs-xl: 15rem; /* Extra Large Text */
-  --fs-600: 5rem;  /* Heading 1 */
-  --fs-500: 3.00rem; /* Heading 2 */
-  --fs-400: 1.5rem;  /* Body Text */
-  
-  /* Spacing and Layout */
-  --space-xs: 0.5rem;
-  --space-sm: 1rem;
-  --space-md: 2rem;
-  --space-lg: 4rem;
-  --space-xl: 8rem;
 
+  --base-font-size: 16px; /* Base font size */
+  --golden-ratio: 1.618; /* Golden ratio */
 
-  
---line-height-normal: 1.6;
+  --font-size-h5: calc(var(--base-font-size) * var(--golden-ratio));
+  --font-size-h4: calc(var(--font-size-h5) * var(--golden-ratio));
+  --font-size-h3: calc(var(--font-size-h4) * var(--golden-ratio));
+  --font-size-h2: calc(var(--font-size-h3) * var(--golden-ratio));
+  --font-size-h1: calc(var(--font-size-h2) * var(--golden-ratio));
 
---letter-spacing: 0.05em;
 
 }
 
 /* Medium Devices (Tablets, Small Laptops) */
 @media (max-width: 1900px) {
   :root {
-    --fs-xl: 10rem;
-    --fs-600: 3rem;
-    --fs-500: 2rem;
-    --fs-400: 1.25rem; /* Adjusted for better readability */
+ 
   }
 }
 
 /* Small Devices (Landscape Phones, Small Tablets) */
 @media (max-width: 1300px) {
   :root {
-    --fs-xl: 5rem;
-    --fs-600: 2rem;
-    --fs-500: 1.5rem; /* Adjusted for hierarchy */
-    --fs-400: 1rem;   /* Standard body text size for readability */
+
   }
 }
 
@@ -52,60 +39,52 @@
 
 
 
-[data-theme='dark'] {
-  --background-color: #5E7463; /* Dark theme color */
-}
-
 body{
-  background-color: var(--background-color);
   margin: 0px;
   padding: 0px;
-  font-family: var(--ff) !important;
-  letter-spacing: var(--letter-spacing);
+  font-family: var(--ff);
+  background-color: var(--background-color);
+  
 }
-
-
 
 
 h1 {
-  font-size: var(--fs-xl);
-  font-weight: 500;
-  margin: 0;
-  padding: 0;
-
+  font-size: var(--font-size-h1);
+  margin-bottom: var(--margin);
+  margin: 0px;
+  padding: 0px;
+  font-weight: 700;
+  font-family: var(--ff);
 }
 
 h2 {
-  font-size: var(--fs-600);
-  font-weight: 500;
-  margin: 0;
-  padding: 0;
+  font-size: var(--font-size-h2);
+  margin-bottom: var(--margin);
+  margin: 0px;
+  padding: 0px;
+  font-weight: 600;
 }
 
 h3 {
-  font-size: var(--fs-500);
-  font-weight: 400;
-  margin: 0;
-  padding: 0;
+  font-size: var(--font-size-h3);
+  margin-bottom: var(--margin);
+  margin: 0px;
+  padding: 0px;
+  font-weight: 500;
 }
 
 h4 {
-  font-size: var(--fs-400);
+  font-size: var(--font-size-h4);
+  margin-bottom: var(--margin);
+  margin: 0px;
+  padding: 0px;
+  font-weight: 400;
+}
+
+h5 {
+  font-size: var(--font-size-h5);
+  margin-bottom: var(--margin);
+  margin: 0px;
+  padding: 0px;
   font-weight: 300;
-  margin: 0;
-  padding: 0;
-}
-
-
-
-
-/*Adding this for the projects component*/
-.no-visible-scrollbar {
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  -webkit-overflow-scrolling: touch;
-}
- 
-.no-visible-scrollbar::-webkit-scrollbar {
-  display: none;
 }
