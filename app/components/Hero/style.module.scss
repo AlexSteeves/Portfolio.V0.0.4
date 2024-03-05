@@ -1,0 +1,45 @@
+.container {
+  height: 200vh;
+  position: relative;
+  .sticky {
+    position: sticky;
+    overflow: hidden;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    .text {
+      
+      /* wrap text */
+      white-space: nowrap;
+      display: flex;
+      justify-content: center;
+      align-items: left;
+      flex-direction: column;
+
+      h1{
+        
+        z-index:50;
+        color: white;
+      
+        
+      }
+      .name{
+        margin-left: 5%;
+      }
+      h3{
+        z-index: 50;
+        color: white;
+
+      }
+    }
+
+    .image {
+        z-index: 40;
+        filter: brightness(80%);
+        object-fit: cover;
+    }
+  }
+}
