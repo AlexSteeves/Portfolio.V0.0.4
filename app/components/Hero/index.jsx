@@ -1,9 +1,12 @@
+'use client'
+/* eslint-disable react/no-unescaped-entities */
+
 import styles from "./style.module.scss";
 import Image from "next/image";
 import Trees from "../../../public/Pictures/HeroPage/Trees.jpg";
 import { useScroll, useTransform, motion} from 'framer-motion'
 import {useRef, useEffect} from 'react'
-export default function index() {
+export default function Index() {
     
     const containerRef = useRef(null);
     const { scrollYProgress } = useScroll({

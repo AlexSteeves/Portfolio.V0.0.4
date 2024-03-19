@@ -1,7 +1,7 @@
 
 import styles from './style.module.scss'
 import StickyFooter from './StickyFooter'
-export default function index(){
+export default function Index(){
     return(
         <main id = "footer">
           

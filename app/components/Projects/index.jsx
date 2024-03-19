@@ -1,7 +1,7 @@
 import { projects } from "./projectData";
 import { useInView, motion } from "framer-motion";
 import { useRef } from "react";
-export default function index() {
+export default function Index() {
   return (
     <div
       id="projects"

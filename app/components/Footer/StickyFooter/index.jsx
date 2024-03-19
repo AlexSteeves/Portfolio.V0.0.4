@@ -1,8 +1,9 @@
 "use client";
-import React, { useRef, useEffect } from "react";
+/*eslint-disable react/no-unescaped-entities*/
+import  { useRef, useEffect } from "react";
 import { useScroll, useTransform, motion } from "framer-motion";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-export default function index() {
+export default function Index() {
   const container = useRef();
   const paths = useRef([]);
 
@@ -17,7 +18,7 @@ export default function index() {
             path.setAttribute("startOffset", -40 + (i * 40) + (e * 40)+ "%");
         })
     })
-  }, [])
+  }, [scrollYProgress])
 
   return (
     <div ref={container}>

@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+
 import styles from "./style.module.scss";
 import Hero from "./components/Hero";
 import "./globals.css";
@@ -10,8 +10,7 @@ import About from "./components/About";
 import Preloader from "./components/PreLoader";
 
 import Footer from "./components/Footer";
-import StickyCursor from './components/StickyCursor'
-import ProjectLink from "./Projects/ProjectLink";
+
 import {RemoveScrollBar} from 'react-remove-scroll-bar';
 
 import Experience from './components/Experience'
