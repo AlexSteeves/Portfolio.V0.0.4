@@ -61,17 +61,7 @@ function Experience({ experienceData }) {
         </ul>
       </motion.div>
       </div>
-      <div className = "overflow-hidden">
-      <motion.button
-      variants={animation} custom={3} animate={isInView ? "enter" : "initial"}
-        onClick={() =>
-          openWindow("https://github.com/AlexSteeves/Nourish-MealPlanGenerator")
-        }
-        className="shadow-[0_4px_14px_0_rgb(0,118,255,39%)] hover:shadow-[0_6px_20px_rgba(0,118,255,23%)] hover:bg-secondary px-8 py-2 bg-accent rounded-md text-text font-light transition duration-200 ease-linear w-[80%] md:w-[40%]"
-      >
-        LEARN MORE
-      </motion.button>
-      </div>
+    
       
     </div>
   );

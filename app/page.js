@@ -22,7 +22,6 @@ export default function Home() {
   useEffect(() => {
     (async () => {
       const LocomotiveScroll = (await import("locomotive-scroll")).default;
-
       const locomotiveScroll = new LocomotiveScroll();
 
       setTimeout(() => {
@@ -35,17 +34,23 @@ export default function Home() {
 
   return (
     <main className={styles.container}>
-       
+      
+      {/*
       <RemoveScrollBar />
       <AnimatePresence mode="wait">
         {isLoading && <Preloader />}
       </AnimatePresence>
-      <Hero />
+    
       
-      <About />
+      
+  */}
+  <AnimatePresence mode="wait">
+        {isLoading && <Preloader />}
+      </AnimatePresence>
+      
      
-
-
+      <Hero />
+      <About />
       <Projects />
       <Experience />
       

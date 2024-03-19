@@ -19,6 +19,7 @@ export default function Index() {
 
   return (
     <main ref = { containerRef} className="h-[200vh] relative">
+      
       <div className={styles.sticky} >
         <motion.div  style={{opacity: opacity}}>
         <Image src={Trees} className={styles.image} fill alt='image'/>
@@ -31,6 +32,7 @@ export default function Index() {
         
         
       </div>
+    
     </main>
   );
 }

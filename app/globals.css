@@ -3,10 +3,7 @@
 @tailwind utilities;
 
 
-@font-face {
-  font-family: 'Main';
-  src: url("../public/Fonts/HelveticaNeue.ttf")
-}
+
 
 :root {
 
@@ -57,6 +54,10 @@
     --font-size-h2: calc(var(--font-size-h3) * var(--golden-ratio));
     --font-size-h1: calc(var(--font-size-h3) * var(--golden-ratio));
   }
+  body{
+    overflow-x:  hidden;
+    overflow-y: scroll;
+  }
 }
 
 
@@ -66,7 +67,11 @@
 body{
   margin: 0px;
   padding: 0px;
-  font-family: "Main";
+
+  overflow-x:  hidden;
+    overflow-y: scroll;
+
+ 
   background-color: var(--background-color);
   
 }
