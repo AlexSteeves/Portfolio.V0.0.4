@@ -11,7 +11,6 @@ import Preloader from "./components/PreLoader";
 
 import Footer from "./components/Footer";
 
-import {RemoveScrollBar} from 'react-remove-scroll-bar';
 
 import Experience from './components/Experience'
 
@@ -35,15 +34,7 @@ export default function Home() {
   return (
     <main className={styles.container}>
       
-      {/*
-      <RemoveScrollBar />
-      <AnimatePresence mode="wait">
-        {isLoading && <Preloader />}
-      </AnimatePresence>
-    
-      
-      
-  */}
+   
   <AnimatePresence mode="wait">
         {isLoading && <Preloader />}
       </AnimatePresence>

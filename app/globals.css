@@ -54,10 +54,7 @@
     --font-size-h2: calc(var(--font-size-h3) * var(--golden-ratio));
     --font-size-h1: calc(var(--font-size-h3) * var(--golden-ratio));
   }
-  body{
-    overflow-x:  hidden;
-    overflow-y: scroll;
-  }
+  
 }
 
 
@@ -69,7 +66,7 @@ body{
   padding: 0px;
 
   overflow-x:  hidden;
-    overflow-y: scroll;
+  overflow-y: scroll;
 
  
   background-color: var(--background-color);

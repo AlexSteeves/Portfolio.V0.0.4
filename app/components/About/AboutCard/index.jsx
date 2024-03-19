@@ -6,7 +6,7 @@ import Image from "next/image";
 export default function AboutMe() {
   return (
     <div className="m-0   max-w-[25vw] h-[25vh] bg-[#F7F7F7] flex flex-col lg:grid lg:grid-cols-2 lg:grid-rows-2 gap-1 p-5">
-      {/* Align the first text to top-left on large screens */}
+      
       <div className="text-cBackground lg:row-start-1 lg:col-start-1 w-full text-start">
         <h1 className="text-[7px] lg:text-sm m-0 p-0 uppercase">about me</h1>
         <h3 className="text-[4px] lg:text-[7px] m-0 p-0 leading-[7px] md:leading-[9px]">
@@ -14,7 +14,7 @@ export default function AboutMe() {
         </h3>
       </div>
 
-      {/* Align the second text to bottom-right on large screens */}
+    
       <div className="mt-5 md:mt-0 text-cBackground lg:row-start-2 lg:col-start-2 w-full text-start">
         <h1 className="text-[7px] lg:text-sm m-0 p-0">ENGINEERING</h1>
         <h3 className=" text-[4px] lg:text-[7px] m-0 p-0 leading-[7px] md:leading-[9px]">

@@ -51,13 +51,14 @@ export default function Index() {
 
       scale: scale8,
     },
+         /*
     {
         src: MageBlood,
   
         scale: scale9,
       },
 
-      /*
+ 
       {
         src: IronRing,
   
