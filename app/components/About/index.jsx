@@ -1,6 +1,6 @@
 import styles from "./style.module.scss";
-import KPark from "../../../public/Pictures/About/kpark.jpg";
-import IronRing from "../../../public/Pictures/About/ironring.jpg";
+//import KPark from "../../../public/Pictures/About/kpark.jpg";
+//import IronRing from "../../../public/Pictures/About/ironring.jpg";
 import MageBlood from "../../../public/Pictures/About/MageBlood.jpg";
 import Profile from "../../../public/Pictures/About/Profile.jpg";
 import OctoPi from "../../../public/Pictures/About/OctoPi.jpg";
@@ -33,12 +33,13 @@ export default function Index() {
 
   const pictures = [
   
-
+    /*
     {
       src: KPark,
 
       scale: scale5,
     },
+  */
 
     {
       src: Profile,
@@ -55,11 +56,15 @@ export default function Index() {
   
         scale: scale9,
       },
+
+      /*
       {
         src: IronRing,
   
         scale: scale10,
       },
+
+      */
   ];
 
   return (
