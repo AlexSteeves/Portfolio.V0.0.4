@@ -1,7 +1,9 @@
 {
   "compilerOptions": {
+    "checkJs": true,
     "paths": {
       "@/*": ["./*"]
     }
-  }
+  },
+  "include": ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"]
 }

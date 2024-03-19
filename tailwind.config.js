@@ -12,7 +12,18 @@ module.exports = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      colors: {
+        cBackground: 'var(--background-color)',
+        accent: 'var(--accent-color)',
+        text: 'var(--text-color)',
+        primary: 'var(--primary-color)',
+        secondary: 'var(--secondary-color)',
+      }
     },
   },
   plugins: [],
 };
+
+const {
+  default: flattenColorPalette,
+} = require("tailwindcss/lib/util/flattenColorPalette");

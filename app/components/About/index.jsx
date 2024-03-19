@@ -1,8 +1,10 @@
 import styles from "./style.module.scss";
-import Image1 from "../../../public/Pictures/About/Image1.jpg";
-import Image2 from "../../../public/Pictures/About/Image2.jpg";
-import Image3 from "../../../public/Pictures/About/Image3.jpg";
-import Image4 from "../../../public/Pictures/About/Image4.jpg";
+import KPark from "../../../public/Pictures/About/KPark.jpg";
+import IronRing from "../../../public/Pictures/About/IronRing.jpg";
+import MageBlood from "../../../public/Pictures/About/MageBlood.jpg";
+import Profile from "../../../public/Pictures/About/Profile.jpg";
+import OctoPi from "../../../public/Pictures/About/OctoPi.jpeg";
+
 import Image from "next/image";
 import { useScroll, useTransform, motion } from "framer-motion";
 import { useRef } from "react";
@@ -33,30 +35,35 @@ export default function Index() {
   
 
     {
-      src: Image2,
+      src: KPark,
 
       scale: scale5,
     },
 
     {
-      src: Image3,
+      src: Profile,
 
       scale: scale6,
     },
     {
-      src: Image4,
+      src: OctoPi,
 
       scale: scale8,
     },
     {
-        src: Image1,
+        src: MageBlood,
   
         scale: scale9,
+      },
+      {
+        src: IronRing,
+  
+        scale: scale10,
       },
   ];
 
   return (
-    <div ref={container} className={styles.container}>
+    <div id = "about" ref={container} className={styles.container}>
       <div className={styles.sticky}>
         <motion.div style = {{scale:scale4}} className = {styles.el}>
             <AboutCard />

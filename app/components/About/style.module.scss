@@ -18,6 +18,7 @@
                 position: relative;
                 width: 25vw;
                 height: 25vh;
+                filter: drop-shadow(0 1px 2px rgb(0 0 0 / 0.1)) drop-shadow(0 1px 1px rgb(0 0 0 / 0.06));
                 img{
                     object-fit: cover;
                 }
@@ -25,14 +26,14 @@
             &:nth-of-type(2){
                 .imageContainer{
                     top: -30vh;
-                    left: 5vw;
-                    width: 35vw;
+                    left: 2vw;
+                    width: 25vw;
                     height: 30vh;
                 }
             }
             &:nth-of-type(3){
                 .imageContainer{
-                    top: -10vh;
+                    top: -15vh;
                     left: -25vw;
                     width: 20vw;
                     height: 45vh;
@@ -42,13 +43,14 @@
                 .imageContainer{
                     left: 27.5vw;
                     width: 25vw;
-                    height: 25vh;
+                    height: 30vh;
+                    top: -10vh;
                 }
             }
             &:nth-of-type(5){
                 .imageContainer{
                     top: 27.5vh;
-                    left: 5vw;
+                    left: -10vw;
                     width: 20vw;
                     height: 25vh;
                 }
@@ -56,9 +58,11 @@
             &:nth-of-type(6){
                 .imageContainer{
                     top: 27.5vh;
-                    left: -22.5vw;
-                    width: 30vw;
-                    height: 25vh;
+                    left: 22.5vw;
+                    width: 25vw;
+                    height: 40vh;
+                    scale: 0.7;
+                    filter: brightness(70%)
                 }
             }
             &:nth-of-type(7){

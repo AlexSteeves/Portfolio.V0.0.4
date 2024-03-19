@@ -1,6 +1,5 @@
 "use client";
 
-import { Metadata } from 'next'
 import Image from "next/image";
 import styles from "./style.module.scss";
 import Hero from "./components/Hero";
@@ -11,15 +10,15 @@ import About from "./components/About";
 import Preloader from "./components/PreLoader";
 
 import Footer from "./components/Footer";
-import Clarify from './pages/clarify'
-import DropDownContianer from './components/DropDownContainer'
+import StickyCursor from './components/StickyCursor'
+import ProjectLink from "./Projects/ProjectLink";
+import {RemoveScrollBar} from 'react-remove-scroll-bar';
 
+import Experience from './components/Experience'
 
+import Projects from './components/Projects'
 export default function Home() {
-  
   const [isLoading, setIsLoading] = useState(true);
-
-
 
   useEffect(() => {
     (async () => {
@@ -35,28 +34,25 @@ export default function Home() {
     })();
   }, []);
 
-  
   return (
-  
-  
     <main className={styles.container}>
+       
+      <RemoveScrollBar />
+      <AnimatePresence mode="wait">
+        {isLoading && <Preloader />}
+      </AnimatePresence>
+      <Hero />
+      
+      <About />
      
-     <AnimatePresence mode="wait">
-       {isLoading && <Preloader />}
-     </AnimatePresence>
-     <Hero />
-     <About /> 
-     <DropDownContianer />
-
-     <Footer />
-   
-   </main>
-   
-
-    
 
 
-
-
+      <Projects />
+      <Experience />
+      
+      <Footer  />
+      
+  
+    </main>
   );
 }

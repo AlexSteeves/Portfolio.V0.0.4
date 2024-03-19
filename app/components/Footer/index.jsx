@@ -1,16 +1,16 @@
 
 import styles from './style.module.scss'
-
+import StickyFooter from './StickyFooter'
 export default function index(){
     return(
-        <div className = {styles.container}>
-            <div className = {styles.footer}>
-                <div className = {styles.socialContainer}>
-                 
-                </div>
-                <p>© 2022 Alex Steeves. All rights reserved</p>
-            </div>
+        <main id = "footer">
+          
             
-        </div>
+              <div className = "h-[50vh]">
+
+              </div>
+              <StickyFooter />
+            
+        </main>
     )
 }

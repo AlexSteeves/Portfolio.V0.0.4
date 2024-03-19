@@ -1,13 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+  font-family: 'Main';
+  src: url("../public/Fonts/HelveticaNeue.ttf")
+}
+
 :root {
 
-  --primary-color: #97B100;
-  --secondary-color: #A8DADC;
-  --accent-color: #FF6B6B;
-  --background-color: #35374B;
-  --text-color: #333333;
+  --primary-color:#8de7e8;
+  --secondary-color: #1e4593;
+  --accent-color: #4e5ddb;
+  --background-color: #0F413F;
+  --text-color: #d9f7f5;
 
 
-  --ff: "Helvetica Neue", Arial, sans-serif; /* Ensure fallback fonts */
+
 
   --base-font-size: 16px; /* Base font size */
   --golden-ratio: 1.618; /* Golden ratio */
@@ -24,14 +34,28 @@
 /* Medium Devices (Tablets, Small Laptops) */
 @media (max-width: 1900px) {
   :root {
- 
+    --base-font-size: 14px; /* Base font size */
+    --golden-ratio: 1.618; /* Golden ratio */
+  
+    --font-size-h5: calc(var(--base-font-size) * var(--golden-ratio));
+    --font-size-h4: calc(var(--font-size-h5) * var(--golden-ratio));
+    --font-size-h3: calc(var(--font-size-h4) * var(--golden-ratio));
+    --font-size-h2: calc(var(--font-size-h3) * var(--golden-ratio));
+    --font-size-h1: calc(var(--font-size-h2) * var(--golden-ratio));
   }
 }
 
 /* Small Devices (Landscape Phones, Small Tablets) */
 @media (max-width: 1300px) {
   :root {
-
+    --base-font-size: 8px; /* Base font size */
+    --golden-ratio: 1.618; /* Golden ratio */
+  
+    --font-size-h5: calc(var(--base-font-size) * var(--golden-ratio));
+    --font-size-h4: calc(var(--font-size-h5) * var(--golden-ratio));
+    --font-size-h3: calc(var(--font-size-h4) * var(--golden-ratio));
+    --font-size-h2: calc(var(--font-size-h3) * var(--golden-ratio));
+    --font-size-h1: calc(var(--font-size-h3) * var(--golden-ratio));
   }
 }
 
@@ -42,7 +66,7 @@
 body{
   margin: 0px;
   padding: 0px;
-  font-family: var(--ff);
+  font-family: "Main";
   background-color: var(--background-color);
   
 }
@@ -87,4 +111,16 @@ h5 {
   margin: 0px;
   padding: 0px;
   font-weight: 300;
+}
+
+
+
+.no-visible-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.no-visible-scrollbar::-webkit-scrollbar {
+  display: none;
 }
