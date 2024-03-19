@@ -3,7 +3,7 @@ import KPark from "../../../public/Pictures/About/KPark.jpg";
 import IronRing from "../../../public/Pictures/About/IronRing.jpg";
 import MageBlood from "../../../public/Pictures/About/MageBlood.jpg";
 import Profile from "../../../public/Pictures/About/Profile.jpg";
-import OctoPi from "../../../public/Pictures/About/OctoPi.jpeg";
+import OctoPi from "../../../public/Pictures/About/OctoPi.jpg";
 
 import Image from "next/image";
 import { useScroll, useTransform, motion } from "framer-motion";
