@@ -24,8 +24,8 @@ export default function Index() {
         <motion.div  style={{opacity: opacity}}>
         <Image src={Trees} className={styles.image} fill alt='image'/>
         <div className=" whitespace-nowrap flex flex-col justify-center text-center text-text px-10">
-          <h1 className = "text-5xl md:text-9xl lg:text-[12rem] z-50">WELCOME, I'M</h1>
-          <h1 className = "ml-[5%] text-5xl md:text-9xl lg:text-[12rem] z-50">ALEX STEEVES</h1>
+          <h1 className = "text-5xl md:text-7xl lg:text-9xl z-50">WELCOME, I'M</h1>
+          <h1 className = "ml-[5%] text-5xl md:text-7xl lg:text-9xl z-50">ALEX STEEVES</h1>
           <h4 className = "mt-1 whitespace-normal z-50 text-xl md:text-3xl lg:text-5xl ">Software developer and Computer Engineering Graduate</h4>
         </div>
         </motion.div>
