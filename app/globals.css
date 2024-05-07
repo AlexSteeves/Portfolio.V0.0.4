@@ -13,52 +13,7 @@
   --background-color: #0F413F;
   --text-color: #d9f7f5;
 
-
-
-
-  --base-font-size: 16px; /* Base font size */
-  --golden-ratio: 1.618; /* Golden ratio */
-
-  --font-size-h5: calc(var(--base-font-size) * var(--golden-ratio));
-  --font-size-h4: calc(var(--font-size-h5) * var(--golden-ratio));
-  --font-size-h3: calc(var(--font-size-h4) * var(--golden-ratio));
-  --font-size-h2: calc(var(--font-size-h3) * var(--golden-ratio));
-  --font-size-h1: calc(var(--font-size-h2) * var(--golden-ratio));
-
-
 }
-
-/* Medium Devices (Tablets, Small Laptops) */
-@media (max-width: 1900px) {
-  :root {
-    --base-font-size: 14px; /* Base font size */
-    --golden-ratio: 1.618; /* Golden ratio */
-  
-    --font-size-h5: calc(var(--base-font-size) * var(--golden-ratio));
-    --font-size-h4: calc(var(--font-size-h5) * var(--golden-ratio));
-    --font-size-h3: calc(var(--font-size-h4) * var(--golden-ratio));
-    --font-size-h2: calc(var(--font-size-h3) * var(--golden-ratio));
-    --font-size-h1: calc(var(--font-size-h2) * var(--golden-ratio));
-  }
-}
-
-/* Small Devices (Landscape Phones, Small Tablets) */
-@media (max-width: 1300px) {
-  :root {
-    --base-font-size: 8px; /* Base font size */
-    --golden-ratio: 1.618; /* Golden ratio */
-  
-    --font-size-h5: calc(var(--base-font-size) * var(--golden-ratio));
-    --font-size-h4: calc(var(--font-size-h5) * var(--golden-ratio));
-    --font-size-h3: calc(var(--font-size-h4) * var(--golden-ratio));
-    --font-size-h2: calc(var(--font-size-h3) * var(--golden-ratio));
-    --font-size-h1: calc(var(--font-size-h3) * var(--golden-ratio));
-  }
-  
-}
-
-
-
 
 
 body{
@@ -68,52 +23,10 @@ body{
   overflow-x:  hidden;
   overflow-y: scroll;
 
- 
   background-color: var(--background-color);
   
 }
 
-
-h1 {
-  font-size: var(--font-size-h1);
-  margin-bottom: var(--margin);
-  margin: 0px;
-  padding: 0px;
-  font-weight: 700;
-  font-family: var(--ff);
-}
-
-h2 {
-  font-size: var(--font-size-h2);
-  margin-bottom: var(--margin);
-  margin: 0px;
-  padding: 0px;
-  font-weight: 600;
-}
-
-h3 {
-  font-size: var(--font-size-h3);
-  margin-bottom: var(--margin);
-  margin: 0px;
-  padding: 0px;
-  font-weight: 500;
-}
-
-h4 {
-  font-size: var(--font-size-h4);
-  margin-bottom: var(--margin);
-  margin: 0px;
-  padding: 0px;
-  font-weight: 400;
-}
-
-h5 {
-  font-size: var(--font-size-h5);
-  margin-bottom: var(--margin);
-  margin: 0px;
-  padding: 0px;
-  font-weight: 300;
-}
 
 
 
@@ -125,4 +38,13 @@ h5 {
 
 .no-visible-scrollbar::-webkit-scrollbar {
   display: none;
+}
+
+@layer components {
+  .h1 {
+    @apply text-4xl sm:text-7xl lg:text-8xl 2xl:text-9xl font-bold 
+  }
+  .h2 {
+    @apply text-4xl sm:text-5xl lg:text-6xl 2xl:text-7xl font-semibold
+  }
 }
