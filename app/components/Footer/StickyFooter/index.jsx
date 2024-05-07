@@ -59,7 +59,7 @@ const StickyBottom = ({ scrollProgress }) => {
             <FaLinkedin className = "h-10 w-10 hover:text-accent duration-300" />
         </a>
         
-        <a target="_blank" href="https://drive.google.com/file/d/106mlDGR48O86jS9WynJ65GBKPDMHlqVM/view?usp=sharing" className = "hover:text-accent duration-300"><h5 className="text-lg md:text-xl lg:text-2xl">Resume</h5></a>
+        <a target="_blank" href="/Resume/Resume.pdf" className = "hover:text-accent duration-300"><h5 className="text-lg md:text-xl lg:text-2xl">Resume</h5></a>
         <a target="_blank" href="mailto:alqusteeves@gmail.com" className = "hover:text-accent duration-300"><h5 className="text-lg md:text-xl lg:text-2xl">Contact</h5></a>
 
         

@@ -21,22 +21,5 @@ export const links = [
     }
 ]
 
-export const footerLinks = [
-    {
-        title: "Facebook",
-        href: "https://google.com/"
-    },
-    {
-        title: "LinkedIn",
-        href: "/"
-    },
-    {
-        title: "Instagram",
-        href: "/"
-    },
-    {
-        title: "Twitter",
-        href: "/"
-    }
-]
+
 
