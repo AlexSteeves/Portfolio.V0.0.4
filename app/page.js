@@ -20,8 +20,10 @@ export default function Home() {
 
   useEffect(() => {
     (async () => {
-      const LocomotiveScroll = (await import("locomotive-scroll")).default;
-      const locomotiveScroll = new LocomotiveScroll();
+      if (window.innerWidth > 768) { // Adjust 768px to your needs
+        const LocomotiveScroll = (await import('locomotive-scroll')).default;
+        const locomotiveScroll = new LocomotiveScroll();
+      }
 
       setTimeout(() => {
         setIsLoading(false);

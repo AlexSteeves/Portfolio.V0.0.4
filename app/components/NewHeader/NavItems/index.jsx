@@ -1,19 +1,13 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { links, footerLinks } from "./data";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { links} from "./data";
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import Link from "next/link";
 
-const phrases = [
-  "It is a long established fact",
-  "that a reader will be distracted",
-  "by the readable content of a page",
-  "when looking at its layout",
-];
 
 export default function index() {
   return (
-    <div className=" z-10 h-[100%] text-[#0F413F] p-10">
+    <div className=" z-10 h-[100%] text-black p-10">
       <div className="flex-grow">
         <NavText />
       </div>
@@ -98,7 +92,7 @@ export function FooterText() {
             initial="initial"
             animate={"enter"}
           >
-            <FaGithub className="h-10 w-10 hover:text-accent duration-300" />
+            <FaGithub className="h-8 w-8 hover:text-accent duration-300" />
           </motion.p>
         </Link>
       </div>
@@ -115,7 +109,7 @@ export function FooterText() {
             animate={"enter"}
           >
          
-            <FaLinkedin className="h-10 w-10 hover:text-accent duration-300" />
+            <FaLinkedin className="h-8 w-8 hover:text-accent duration-300" />
           </motion.p>
         </a>
       </div>
@@ -123,7 +117,7 @@ export function FooterText() {
       <div className="margin-0 text-sm overflow-hidden mb-4">
         <a
           target="_blank"
-          href="https://drive.google.com/file/d/106mlDGR48O86jS9WynJ65GBKPDMHlqVM/view?usp=sharing" className = "hover:text-accent duration-300"
+          href="/Resume/Resume.pdf" className = "hover:text-accent duration-300"
         >
           <motion.p
             custom={3}
@@ -138,19 +132,21 @@ export function FooterText() {
         </a>
       </div>
 
-      <div className="margin-0 text-sm overflow-hidden mb-4">
+      <div className="margin-0 overflow-hidden mb-4">
         <a target="_blank" href="mailto:alqusteeves@gmail.com" className = "hover:text-accent duration-300">
-          <motion.p
-            custom={4}
+        <motion.p
+            custom={2}
             variants={animation}
             initial="initial"
             animate={"enter"}
-            className="text-xl"
           >
-          Contact
+         
+            <FaEnvelope className="h-8 w-8 hover:text-accent duration-300" />
           </motion.p>
         </a>
       </div>
     </div>
   );
 }
+
+
