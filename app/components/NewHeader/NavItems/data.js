@@ -20,9 +20,3 @@ export const links = [
         href: "#footer"
     }
 ]
-
-<<<<<<< HEAD
-=======
-
-
->>>>>>> e701dc68b292bca60a435f068ef31b55577d8f96

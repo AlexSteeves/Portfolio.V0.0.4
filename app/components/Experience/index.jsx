@@ -55,7 +55,7 @@ function Experience({ experienceData }) {
           variants={animation}
           custom={2}
           animate={isInView ? "enter" : "initial"}
-          className=" font-normal leading-[1] "
+          className=" font-normal leading-[1.1] "
             style={{ fontSize: "calc(16px + 1vw)" }}
         >
           {experienceData.company}
