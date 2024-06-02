@@ -13,11 +13,11 @@ const phrases = [
 
 export default function index() {
   return (
-    <div className=" z-10 h-[100%] text-black p-10">
+    <div className=" z-10 h-[100%] text-[#0F413F] p-10">
       <div className="flex-grow">
         <NavText />
       </div>
-      <div className="absolute bottom-0 mb-4">
+      <div className="bottom-0 mt-4">
         <FooterText />
       </div>
     </div>

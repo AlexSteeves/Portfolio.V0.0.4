@@ -13,7 +13,7 @@ import Footer from "./components/Footer";
 
 
 import Experience from './components/Experience'
-
+import Slider from './components/SharedComponents/Slider'
 import Projects from './components/Projects'
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -27,21 +27,24 @@ export default function Home() {
         setIsLoading(false);
         document.body.style.cursor = "default";
         window.scrollTo(0, 0);
-      }, 500);
+      }, 100);
     })();
   }, []);
 
   return (
     <main className={styles.container}>
       
-   
-  <AnimatePresence mode="wait">
+ 
+    <AnimatePresence mode="wait">
         {isLoading && <Preloader />}
       </AnimatePresence>
       
      
       <Hero />
+    
       <About />
+  
+      
       <Projects />
       <Experience />
       

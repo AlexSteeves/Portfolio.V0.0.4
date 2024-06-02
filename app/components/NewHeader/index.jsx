@@ -8,7 +8,7 @@ import NavItems from './NavItems'
 const menu = {
     open: {
         width: "350px",
-        height: "60vh",
+        height: "fit-content",
         top: "-25px",
         right: "-25px",
         transition: { duration: 0.25, type: "tween", ease: [0.76, 0, 0.24, 1]}

@@ -18,15 +18,18 @@ export default function Index() {
 
 
   return (
-    <main ref = { containerRef} className="h-[200vh] relative">
+    <main ref = { containerRef} className="h-[150vh] relative">
       
       <div className={styles.sticky} >
         <motion.div  style={{opacity: opacity}}>
         <Image src={Trees} className={styles.image} fill alt='image'/>
         <div className=" whitespace-nowrap flex flex-col justify-center text-center text-text px-10">
-          <h1 className = "text-5xl md:text-9xl lg:text-[12rem] z-50">WELCOME, I'M</h1>
-          <h1 className = "ml-[5%] text-5xl md:text-9xl lg:text-[12rem] z-50">ALEX STEEVES</h1>
-          <h4 className = "mt-1 whitespace-normal z-50 text-xl md:text-3xl lg:text-5xl ">Software developer and Computer Engineering Graduate</h4>
+          <div className = "z-50 leading-[0.95] " >
+            <p className = "uppercase my-0 py-0 font-bold" style = {{fontSize: 'calc(16px + 11vw)'}}>WELCOME, I'M</p>
+            <p className = "ml-[3%] uppercase my-0 font-bold" style = {{fontSize: 'calc(16px + 11vw)'}}>ALEX STEEVES</p>
+          </div>
+          
+          <h4 className = "mt-5 whitespace-normal z-50 " style = {{fontSize: 'calc(16px + 1vw)'}} >Software developer and Computer Engineering Graduate</h4>
         </div>
         </motion.div>
         

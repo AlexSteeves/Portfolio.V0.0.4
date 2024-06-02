@@ -6,7 +6,7 @@ export default function Index(){
         <main id = "footer">
           
             
-              <div className = "h-[50vh]">
+              <div className = "h-[10vh]">
 
               </div>
               <StickyFooter />

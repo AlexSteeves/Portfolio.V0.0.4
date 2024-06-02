@@ -16,29 +16,11 @@ export default function Index() {
     setDimension({ width: window.innerWidth, height: window.innerHeight });
   }, []);
 
-  const initialPath = `M0 0 L${dimension.width} 0 L${dimension.width} ${
-    dimension.height
-  } Q${dimension.width / 2} ${dimension.height + 300} 0 ${
-    dimension.height
-  }  L0 0`;
-  const targetPath = `M0 0 L${dimension.width} 0 L${dimension.width} ${
-    dimension.height
-  } Q${dimension.width / 2} ${dimension.height} 0 ${dimension.height}  L0 0`;
-
-  const curve = {
-    initial: {
-      d: initialPath,
-      transition: { duration: 0.35, ease: [0.76, 0, 0.24, 1] },
-    },
-    exit: {
-      d: targetPath,
-      transition: { duration: 0.35, ease: [0.76, 0, 0.24, 1], delay: 0.3 },
-    },
-  };
+  
 
   const animation = {
     initial:{y: "100%"},
-    enter: i =>({y:"0", transition: {duration: 0.75, ease: [0.33, 1, 0.68, 1], delay : 0.25 * i}})
+    enter: i =>({y:"0", transition: {duration: 0.25, ease: [0.33, 1, 0.68, 1], delay : 0.25 * i}})
     
   }
 

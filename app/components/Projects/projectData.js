@@ -4,10 +4,10 @@ export const projects = [
   
       
       title:"Nourish Meal Generator",
-      description:"Meal generator that allows user to select various inputs to create a daily meal plan for them and display all the ingredients. Hosted with Amplify.",
+      description:"Nourish is a meal plan generator that allows users to create customized meal plans using GPT3.5-turbo.",
   
-      skills: ["Next.js", "Framer Motion", "TailwindCSS", "Axios", "GPT-3.5-turbo", "Vercel"],
-      link: "https://github.com/AlexSteeves/Nourish-MealPlanGenerator",
+      skills: ["Framer Motion","Next.js",  "TailwindCSS", "Axios", "GPT-3.5-turbo", "Vercel", "Supabase"],
+      link: "https://github.com/AlexSteeves/Nourish_v2.0",
       backgroundColor: "#47145b",
         textColor: "#f3f0f5",
     },
@@ -17,8 +17,8 @@ export const projects = [
       title: "Personal Portfolio",
       description: "Designed and built this porftolio to display skills and link all of my socials. Hosted with Vercel.",
    
-      skills: ["Next.js", "Framer Motion", "GSAP", "Locomotive Scroll v5", "TailwindCSS", "Vercel"],
-      link: "https://github.com/AlexSteeves/Portfolio_v1.0.3",
+      skills: ["Framer Motion","Next.js", "GSAP",  "Locomotive", "TailwindCSS", "Vercel"],
+      link: "https://github.com/AlexSteeves/Portfolio_v2.0.1",
       backgroundColor: "#47145b",
       textColor: "#f3f0f5",
     },
@@ -35,9 +35,18 @@ export const projects = [
     {
     
       title: "Hotel Palace",
-      description: "Full Stack hotel booking app.",
-      skills: ["React.js", "PostgeSQL", "CSS", "Node.js"],
+      description: "Full Stack hotel booking app which allows customers to see room visibility and booking, and make reservations.",
+      skills: ["React.js", "PostgeSQL","Bootstrap", "Node.js"],
       link: "https://github.com/MichiasShiferaw/database-proj",
+      backgroundColor: "#47145b",
+      textColor: "#f3f0f5",
+    },
+    {
+    
+      title: "Large Language Model",
+      description: "Large Language Model I built following Andrej Karpathy that trains a model on text data. ",
+      skills: ["Python", "PyTorch", "Jupyter Notebook"],
+      link: "https://github.com/AlexSteeves/Basic-GPTLanguageModel",
       backgroundColor: "#47145b",
       textColor: "#f3f0f5",
     },
