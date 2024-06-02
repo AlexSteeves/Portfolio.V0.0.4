@@ -8,6 +8,8 @@
     justify-content: center;
     align-items: center;
     width: 100%;
+    overflow-x: hidden;
+   
     .text {
       
       white-space: nowrap;
@@ -17,22 +19,9 @@
       flex-direction: column;
       line-height: auto;
     
-      h1{
-        color: white;
-        z-index: 50;
-        line-height: 1;
-      }
-      h4{
-        margin: auto;
-        margin-top: 10px;
-        color: white;
-        z-index: 50;
-      }
-
+  
      
-      .name{
-        margin-left: 5%;
-      }
+   
       
     }
 

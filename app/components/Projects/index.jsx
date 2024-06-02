@@ -76,7 +76,7 @@ function Project({ projectData }) {
             </p>
             <ul
               className="grid grid-cols-2 list-disc list-inside gap-x-4"
-              style={{ fontSize: "calc(16px + 0.5vw)" }}
+              style={{ fontSize: "calc(14px + 0.3vw)" }}
             >
               {projectData.skills.map((skill) => (
                 <li className=" font-regular whitespace-nowrap" key={skill}>
@@ -94,7 +94,7 @@ function Project({ projectData }) {
             animate={isInView ? "enter" : "initial"}
             className=" hover:bg-[#13481F] bg-[#433BFF] text-[#f4faf5] font-semibold transition duration-300 ease-linear max-w-min whitespace-nowrap py-3 px-6 rounded-lg uppercase hover:drop-shadow-sm"
           >
-            {" "}
+           
             <a href={projectData.link} target="_blank">
               Visit the Repo
             </a>

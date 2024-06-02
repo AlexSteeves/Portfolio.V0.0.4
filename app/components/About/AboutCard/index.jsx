@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function AboutMe() {
   return (
-    <div className="m-0 max-w-[25vw] h-fit md:h-[25vh] bg-[#F7F7F7] flex flex-col lg:grid lg:grid-cols-2 lg:grid-rows-2 gap-1 p-5">
+    <div className="m-0 max-w-[25vw] h-fit md:h-[25vh] bg-[#F7F7F7] flex flex-col lg:grid lg:grid-cols-2 lg:grid-rows-2 gap-1 p-3">
       
       <div className="text-cBackground lg:row-start-1 lg:col-start-1 w-full text-start md:w-3/4">
         <h1 className=" m-0 p-0 uppercase whitespace-nowrap" style={{fontSize: "calc(12px + 0.15vw)"}}>about me</h1>
