@@ -10,24 +10,24 @@ import Lenis from "@studio-freight/lenis";
 import Footer from "./components/Footer";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
+import "lenis/dist/lenis.css";
+
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    (async () => {
-      const lenis = new Lenis();
-      const raf = (time) => {
-        lenis.raf(time);
-        requestAnimationFrame(raf);
-      };
+    const lenis = new Lenis();
+    const raf = (time) => {
+      lenis.raf(time);
       requestAnimationFrame(raf);
+    };
+    requestAnimationFrame(raf);
 
-      setTimeout(() => {
-        setIsLoading(false);
-        document.body.style.cursor = "default";
-        window.scrollTo(0, 0);
-      }, 100);
-    })();
+    setTimeout(() => {
+      setIsLoading(false);
+      document.body.style.cursor = "default";
+      window.scrollTo(0, 0);
+    }, 100);
   }, []);
 
   return (
