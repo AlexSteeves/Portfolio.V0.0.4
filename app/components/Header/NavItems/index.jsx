@@ -1,17 +1,17 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { links} from "./data";
+import { links } from "./data";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import Link from "next/link";
-
+import "./NavItems.scss";
 
 export default function index() {
   return (
-    <div className=" z-10 h-[100%] text-black p-10">
-      <div className="flex-grow">
+    <div className="z-10 h-full p-8 flex flex-col justify-between gap-8 ">
+      <div className="">
         <NavText />
       </div>
-      <div className="bottom-0 mt-4">
+      <div className="">
         <FooterText />
       </div>
     </div>
@@ -40,12 +40,16 @@ export function NavText() {
   };
 
   return (
-    <div ref={body} className="">
+    <div ref={body} className="flex flex-col gap-2">
       {links.map((link, index) => {
         return (
-          <div key={index} className="margin-0 text-3xl overflow-hidden mb-4">
+          <div
+            key={index}
+            className="text-2xl uppercase tracking-[0.07em] w-fit font-[300]"
+          >
             <Link href={link.href}>
               <motion.p
+                className="header-text"
                 custom={index}
                 variants={animation}
                 initial="initial"
@@ -83,8 +87,8 @@ export function FooterText() {
   };
 
   return (
-    <div ref={body} className="flex flex-row gap-4 ">
-      <div className="margin-0 text-sm overflow-hidden mb-4">
+    <div ref={body} className="flex flex-row justify-between w-full">
+      <div className="text-sm overflow-hidden">
         <Link target="_blank" href="https://github.com/AlexSteeves">
           <motion.p
             custom={1}
@@ -97,7 +101,7 @@ export function FooterText() {
         </Link>
       </div>
 
-      <div className="margin-0 text-sm overflow-hidden mb-4">
+      <div className="text-sm overflow-hidden">
         <a
           target="_blank"
           href="https://www.linkedin.com/in/alexander-steeves/"
@@ -108,45 +112,45 @@ export function FooterText() {
             initial="initial"
             animate={"enter"}
           >
-         
             <FaLinkedin className="h-8 w-8 hover:text-accent duration-300" />
           </motion.p>
         </a>
       </div>
 
-      <div className="margin-0 text-sm overflow-hidden mb-4">
+      <div className="text-sm overflow-hidden flex items-center">
         <a
           target="_blank"
-          href="/Resume/Resume.pdf" className = "hover:text-accent duration-300"
+          href="/Resume/Resume.pdf"
+          className="hover:text-accent duration-300"
         >
           <motion.p
             custom={3}
             variants={animation}
             initial="initial"
             animate={"enter"}
-            className="text-xl"
+            className="text-xl flex justify-center  uppercase"
           >
-            
             Resume
           </motion.p>
         </a>
       </div>
 
-      <div className="margin-0 overflow-hidden mb-4">
-        <a target="_blank" href="mailto:alqusteeves@gmail.com" className = "hover:text-accent duration-300">
-        <motion.p
+      <div className="overflow-hidden">
+        <a
+          target="_blank"
+          href="mailto:alqusteeves@gmail.com"
+          className="hover:text-accent duration-300"
+        >
+          <motion.p
             custom={2}
             variants={animation}
             initial="initial"
             animate={"enter"}
           >
-         
-            <FaEnvelope className="h-8 w-8 hover:text-accent duration-300" />
+            <FaEnvelope className="w-8 h-8 hover:text-accent duration-300" />
           </motion.p>
         </a>
       </div>
     </div>
   );
 }
-
-
