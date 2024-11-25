@@ -11,7 +11,7 @@ const menu = {
     height: "fit-content",
     top: "-25px",
     right: "-25px",
-    transition: { duration: 0.25, type: "tween", ease: [0.76, 0, 0.24, 1] },
+    transition: { duration: 0.2, type: "tween", ease: [0.76, 0, 0.24, 1] },
   },
   closed: {
     width: "100px",

@@ -1,89 +1,77 @@
-import styles from "./style.module.scss";
-//import KPark from "../../../public/Pictures/About/kpark.jpg";
-//import IronRing from "../../../public/Pictures/About/ironring.jpg";
-import MageBlood from "../../../public/Pictures/About/MageBlood.jpg";
-import Profile from "../../../public/Pictures/About/Profile.jpg";
-import OctoPi from "../../../public/Pictures/About/OctoPi.jpg";
-
-import Image from "next/image";
-import { useScroll, useTransform, motion } from "framer-motion";
+"use client";
+import { useInView, motion } from "framer-motion";
 import { useRef } from "react";
-import AboutCard from './AboutCard'
+const aboutText = [
+  "I love building responsive and useable applications,",
+  "with a focus on scalability.",
+  "I have a strong passion for programming and love to learn new things.",
+];
 
-export default function Index() {
-  const container = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: container,
-    offset: ["start start", "end end"],
-  });
+const aboutText2 =
+  "I love building responsive and useable applications with a focus on scalability. I have a strong passion for programming and love to learn new things.";
 
-  
-  const scale4 = useTransform(scrollYProgress, [0, 1], [1, 4]);
-
-  const scale5 = useTransform(scrollYProgress, [0, 1], [1, 5]);
-
-  const scale6 = useTransform(scrollYProgress, [0, 1], [1, 6]);
-
-  const scale8 = useTransform(scrollYProgress, [0, 1], [1, 8]);
-
-  const scale9 = useTransform(scrollYProgress, [0, 1], [1, 9]);
-  const scale10 = useTransform(scrollYProgress, [0, 1], [1, 10]);
-
-
-
-  const pictures = [
-  
-    /*
-    {
-      src: KPark,
-
-      scale: scale5,
-    },
-  */
-
-    {
-      src: Profile,
-
-      scale: scale6,
-    },
-    {
-      src: OctoPi,
-
-      scale: scale8,
-    },
-         /*
-    {
-        src: MageBlood,
-  
-        scale: scale9,
-      },
-
- 
-      {
-        src: IronRing,
-  
-        scale: scale10,
-      },
-
-      */
-  ];
-
+export default function AboutMe() {
   return (
-    <div id = "about" ref={container} className={styles.container}>
-      <div className={styles.sticky}>
-        <motion.div style = {{scale:scale4}} className = {styles.el}>
-            <AboutCard />
-        </motion.div>
-        {pictures.map(({ src, scale }, index) => {
-          return (
-            <motion.div key={index} style={{ scale }} className={styles.el}>
-              <div className={styles.imageContainer}>
-                <Image src={src} fill alt="image" placeholder="blur" />
-              </div>
-            </motion.div>
-          );
-        })}
+    <div className="w-full py-[10vh] bg-[#F5F5F5] z-10 rounded-t-2xl">
+      <div className="max-w-[1400px] mx-auto flex flex-col gap-16 px-4 xl:px-8 text-cBackground">
+        <div className="flex flex-col gap-2">
+          <span className="uppercase text-[2rem] lg:text-[3rem] tracking-[0.1em] font-[600]">
+            about me
+          </span>
+          <div className="flex flex-row">
+            <h3 className="leading-[1.1] tracking-[-0.03em] font-[300] text-balance text-[1.5rem] lg:text-[2rem]">
+              I love building responsive and useable applications with a focus
+              on scalability. I have a strong passion for programming and love
+              to learn new things.
+            </h3>
+          </div>
+        </div>
+        <div className="flex flex-col gap-2">
+          <span className="uppercase text-[2rem] lg:text-[3rem] tracking-[0.1em] font-[600]">
+            ENGINEERING
+          </span>
+          <h3 className="leading-[1.1] tracking-[-0.03em] font-[300] text-balance text-[1.5rem] lg:text-[2rem]">
+            With a degree in Computer Engineering, work experience with Java,
+            SQL as well as data science, and many projects built using
+            React/Next.JS, I am interested in just about every part of Software
+            whether that's low/high level programming, or frontend/backend.
+          </h3>
+        </div>
       </div>
     </div>
   );
 }
+const MaskText = ({ text, custom }) => {
+  const ref = useRef(null);
+  const inView = useInView(ref, { threshold: 1, triggerOnce: false });
+
+  const animation = {
+    initial: { y: "100%" },
+    enter: {
+      y: "0",
+      transition: {
+        duration: 0.75,
+        ease: [0.33, 1, 0.68, 1],
+        delay: 0.075 * custom,
+      },
+    },
+  };
+
+  {
+    /* <span className="leading-[1.1] tracking-[-0.03em] font-[300] text-balance text-[1.5rem] lg:text-[2rem]">
+          
+          </span> */
+  }
+  return (
+    <div className="overflow-hidden" ref={ref}>
+      <motion.span
+        variants={animation}
+        initial="initial"
+        animate={inView ? "enter" : "initial"}
+        className="leading-[1.1] tracking-[-0.03em] font-[300] text-balance text-[1.5rem] lg:text-[2rem]"
+      >
+        {text}
+      </motion.span>
+    </div>
+  );
+};

@@ -34,7 +34,7 @@ export function NavText() {
       transition: {
         duration: 0.75,
         ease: [0.33, 1, 0.68, 1],
-        delay: 0.075 * i,
+        delay: 0.11 * i,
       },
     }),
   };
@@ -45,7 +45,7 @@ export function NavText() {
         return (
           <div
             key={index}
-            className="text-2xl uppercase tracking-[0.07em] w-fit font-[300]"
+            className="text-2xl uppercase tracking-[0.07em] w-fit font-[300] overflow-hidden"
           >
             <Link href={link.href}>
               <motion.p

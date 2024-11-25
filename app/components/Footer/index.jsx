@@ -52,26 +52,26 @@ export default function Index() {
 const StickyBottom = () => {
   return (
     <div
-      className="bg-black h-[200px] relative"
+      className="bg-[#F5F5F5] h-[200px] relative"
       style={{ clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)" }}
     >
       <div className="relative h-[calc(100vh+200px)] -top-[100vh]">
         <div className="h-[200px] sticky top-[calc(100vh-200px)] flex justify-center flex-row gap-4 md:gap-8 xl:gap-16 items-center text-white">
           <a target="_blank" href="https://github.com/AlexSteeves">
-            <FaGithub className="h-10 w-10 hover:text-accent duration-300  " />
+            <FaGithub className="h-10 w-10 hover:text-accent duration-300  text-cBackground " />
           </a>
 
           <a
             target="_blank"
             href="https://www.linkedin.com/in/alexander-steeves/"
           >
-            <FaLinkedin className="h-10 w-10 hover:text-accent duration-300" />
+            <FaLinkedin className="h-10 w-10 hover:text-accent duration-300 text-cBackground " />
           </a>
 
           <a
             target="_blank"
             href="/Resume/Resume.pdf"
-            className=" duration-300 uppercase text-xl tracking-[0.1em] relative"
+            className=" duration-300 uppercase text-xl tracking-[0.1em] relative text-cBackground "
           >
             <p className="footer-text">Resume</p>
           </a>
@@ -80,7 +80,7 @@ const StickyBottom = () => {
             href="mailto:alqusteeves@gmail.com"
             className="hover:text-accent duration-300"
           >
-            <FaEnvelope className="w-8 h-8 hover:text-accent duration-300" />
+            <FaEnvelope className="w-8 h-8 hover:text-accent duration-300 text-cBackground " />
           </a>
         </div>
       </div>
