@@ -1,5 +1,4 @@
 "use client";
-import styles from "./style.module.scss";
 import Hero from "./components/Hero";
 import "./globals.css";
 import { useEffect, useState, useRef } from "react";
@@ -11,9 +10,17 @@ import Footer from "./components/Footer";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import "lenis/dist/lenis.css";
+import { useScroll } from "framer-motion";
+import Slider from "./components/SharedComponents/Slider";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
+
+  const container = useRef();
+  const { scrollYProgress } = useScroll({
+    target: container,
+    offset: ["start end", "end start"],
+  });
 
   useEffect(() => {
     const lenis = new Lenis();
@@ -31,16 +38,18 @@ export default function Home() {
   }, []);
 
   return (
-    <main className={styles.container}>
-      <AnimatePresence mode="wait">
+    <main className="relative" ref={container}>
+      {/* <AnimatePresence mode="wait">
         {isLoading && <Preloader />}
-      </AnimatePresence>
+      </AnimatePresence> */}
 
       <Hero />
 
       <About />
 
+      <Slider text="Selected Works" direction="-1" progress={scrollYProgress} />
       <Projects />
+      <Slider text="Experience" direction="1" progress={scrollYProgress} />
       <Experience />
 
       <Footer />

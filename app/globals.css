@@ -97,13 +97,3 @@ h5 {
   padding: 0px;
   font-weight: 300;
 }
-
-.no-visible-scrollbar {
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  -webkit-overflow-scrolling: touch;
-}
-
-.no-visible-scrollbar::-webkit-scrollbar {
-  display: none;
-}

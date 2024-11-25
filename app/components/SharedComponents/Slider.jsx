@@ -1,26 +1,20 @@
 "use client";
-import { useScroll, motion, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { motion, useTransform } from "framer-motion";
 
-export default function Slider({ text, direction }) {
+export default function Slider({ text, direction, progress }) {
   const outputText = (text + " ").repeat(8);
-  const container = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: container,
-    offset: ["start end", "end start"],
-  });
 
-  const sliderProgress = useTransform(
-    scrollYProgress,
+  const translateX = useTransform(
+    progress,
     [0, 1],
-    [-150 * direction, 150 * direction]
+    [-450 * direction, 450 * direction]
   );
 
   return (
-    <div className="h-fill overflow-hidden bg-[#0F413F]" ref={container}>
+    <div className="overflow-hidden bg-[#0F413F]" r>
       <motion.div
-        className="whitespace-nowrap flex relative left-[-20%]"
-        style={{ x: sliderProgress, willChange: "transform" }}
+        className="whitespace-nowrap flex relative left-[-40%]"
+        style={{ x: translateX, willChange: "transform" }}
       >
         <p className="uppercase whitespace-nowrap mx-5 font-semibold text-[#F5F5F5] text-[3rem] md:text-[4rem] xl:text-[5rem]">
           {outputText}

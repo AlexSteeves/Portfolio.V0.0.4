@@ -1,20 +1,16 @@
 import { projects } from "./projectData";
 import { motion } from "framer-motion";
-import Slider from "../SharedComponents/Slider";
 import "./Projects.scss";
 export default function Index() {
   return (
-    <>
-      <Slider text="Selected Works" direction="-1" />
-      <div
-        id="projects"
-        className={`max-w-[1400px] mx-auto grid p-4 gap-4 my-[5vh] lg:my-[10vh] grid-container`}
-      >
-        {projects.map((project, index) => (
-          <Project key={index} projectData={project} />
-        ))}
-      </div>
-    </>
+    <div
+      id="projects"
+      className={`max-w-[1400px] mx-auto grid p-4 gap-4 my-[5vh] lg:my-[10vh] grid-container`}
+    >
+      {projects.map((project, index) => (
+        <Project key={index} projectData={project} />
+      ))}
+    </div>
   );
 }
 

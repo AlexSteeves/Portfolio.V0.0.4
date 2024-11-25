@@ -1,20 +1,16 @@
 import { experience } from "./ExperienceData";
 import { motion } from "framer-motion";
-import Slider from "../SharedComponents/Slider";
 import "./Experience.scss";
 export default function index() {
   return (
-    <>
-      <Slider text="Experience" direction="1" />
-      <div
-        id="experience"
-        className="max-w-[1400px] mx-auto grid p-4 gap-4 my-[5vh] lg:my-[10vh] grid-container"
-      >
-        {experience.map((job, index) => (
-          <Experience key={index} experienceData={job} />
-        ))}
-      </div>
-    </>
+    <div
+      id="experience"
+      className="max-w-[1400px] mx-auto grid p-4 gap-4 my-[5vh] lg:my-[10vh] grid-container"
+    >
+      {experience.map((job, index) => (
+        <Experience key={index} experienceData={job} />
+      ))}
+    </div>
   );
 }
 
