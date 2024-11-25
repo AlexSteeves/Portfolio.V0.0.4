@@ -1,8 +1,8 @@
 .header {
   position: fixed;
-  right: 35px;
-  top: 35px;
   z-index: 50;
+  right: 20px;
+  top: 35px;
   .menu {
     width: 480px;
     height: 650px;
@@ -10,5 +10,11 @@
     position: relative;
     background-color: rgba(255, 255, 255, 0.6);
     backdrop-filter: blur(20px);
+  }
+}
+
+@media (min-width: 768px) {
+  .header {
+    right: 35px;
   }
 }

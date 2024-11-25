@@ -1,26 +1,25 @@
-'use client'
-import {scrollYProgress, useScroll, motion, useTransform} from 'framer-motion'
-import {useRef} from 'react';
+"use client";
+import { motion, useTransform } from "framer-motion";
 
-export default function Slider({text, direction}){
+export default function Slider({ text, direction, progress }) {
+  const outputText = (text + " ").repeat(8);
 
-    const container = useRef(null);
-    const {scrollYProgress} = useScroll({ target: container, offset: ['start end', 'end start']});
+  const translateX = useTransform(
+    progress,
+    [0, 1],
+    [-450 * direction, 450 * direction]
+  );
 
-    const x = useTransform(scrollYProgress, [0, 1], [-250 * direction, 250 * direction]);
-
-
-
-    return(
-        <div className = "h-fill overflow-hidden bg-[#FFFFFF]" ref = {container}> 
-            <motion.div className = "whitespace-nowrap flex relative" style={{x, left: '-40%'}}>
-                <p className = "uppercase whitespace-nowrap mx-5 font-semibold text-[#0F413F]" style={{fontSize: 'calc(16px + 5vw)'}}>{text}</p>
-                <p className = "uppercase whitespace-nowrap mx-5 font-semibold text-[#0F413F]" style={{fontSize: 'calc(16px + 5vw)'}}>{text}</p>
-                <p className = "uppercase whitespace-nowrap mx-5 font-semibold text-[#0F413F]" style={{fontSize: 'calc(16px + 5vw)'}}>{text}</p>
-                <p className = "uppercase whitespace-nowrap mx-5 font-semibold text-[#0F413F]" style={{fontSize: 'calc(16px + 5vw)'}}>{text}</p>
-                <p className = "uppercase whitespace-nowrap mx-5 font-semibold text-[#0F413F]" style={{fontSize: 'calc(16px + 5vw)'}}>{text}</p>
-            </motion.div>
-        </div>
-
-    )
+  return (
+    <div className="overflow-hidden bg-[#0F413F]" r>
+      <motion.div
+        className="whitespace-nowrap flex relative left-[-40%]"
+        style={{ x: translateX, willChange: "transform" }}
+      >
+        <p className="uppercase whitespace-nowrap mx-5 font-semibold text-[#F5F5F5] text-[3rem] md:text-[4rem] xl:text-[5rem]">
+          {outputText}
+        </p>
+      </motion.div>
+    </div>
+  );
 }

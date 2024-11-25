@@ -11,7 +11,7 @@ const menu = {
     height: "fit-content",
     top: "-25px",
     right: "-25px",
-    transition: { duration: 0.25, type: "tween", ease: [0.76, 0, 0.24, 1] },
+    transition: { duration: 0.2, type: "tween", ease: [0.76, 0, 0.24, 1] },
   },
   closed: {
     width: "100px",
@@ -31,21 +31,32 @@ export default function Index() {
   const [isActive, setIsActive] = useState(false);
 
   return (
-    <div className={styles.header}>
-      <motion.div
-        className={styles.menu}
-        variants={menu}
-        animate={isActive ? "open" : "closed"}
-        initial="closed"
+    <>
+      <p
+        className="fixed z-50 top-[35px] left-[20px] md:left-[35px] 
+               uppercase text-lg lg:text-xl
+               text-white mix-blend-difference
+               "
       >
-        <AnimatePresence>{isActive && <NavItems />}</AnimatePresence>
-      </motion.div>
-      <Button
-        isActive={isActive}
-        toggleMenu={() => {
-          setIsActive(!isActive);
-        }}
-      />
-    </div>
+        Alex Steeves
+      </p>
+
+      <div className={styles.header}>
+        <motion.div
+          className={styles.menu}
+          variants={menu}
+          animate={isActive ? "open" : "closed"}
+          initial="closed"
+        >
+          <AnimatePresence>{isActive && <NavItems />}</AnimatePresence>
+        </motion.div>
+        <Button
+          isActive={isActive}
+          toggleMenu={() => {
+            setIsActive(!isActive);
+          }}
+        />
+      </div>
+    </>
   );
 }
