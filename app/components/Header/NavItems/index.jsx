@@ -118,17 +118,13 @@ export function FooterText() {
       </div>
 
       <div className="text-sm overflow-hidden flex items-center">
-        <a
-          target="_blank"
-          href="/Resume/Resume.pdf"
-          className="hover:text-accent duration-300"
-        >
+        <a target="_blank" href="/Resume/Resume.pdf">
           <motion.p
             custom={3}
             variants={animation}
             initial="initial"
             animate={"enter"}
-            className="text-xl flex justify-center  uppercase"
+            className="text-xl flex justify-center uppercase header-text"
           >
             Resume
           </motion.p>
