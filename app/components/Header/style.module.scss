@@ -1,0 +1,14 @@
+.header {
+  position: fixed;
+  right: 35px;
+  top: 35px;
+  z-index: 50;
+  .menu {
+    width: 480px;
+    height: 650px;
+    border-radius: 25px;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(20px);
+  }
+}

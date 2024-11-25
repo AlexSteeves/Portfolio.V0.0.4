@@ -1,7 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 
-import Head from "./components/NewHeader";
+import Header from "./components/Header";
 
 const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
           Alex Steeves
         </p>
 
-        <Head />
+        <Header />
         {children}
       </body>
     </html>
