@@ -31,21 +31,32 @@ export default function Index() {
   const [isActive, setIsActive] = useState(false);
 
   return (
-    <div className={styles.header}>
-      <motion.div
-        className={styles.menu}
-        variants={menu}
-        animate={isActive ? "open" : "closed"}
-        initial="closed"
+    <>
+      <p
+        className="fixed z-50 top-[35px] left-[20px] md:left-[35px] 
+               uppercase text-lg lg:text-xl
+               text-white mix-blend-difference
+               "
       >
-        <AnimatePresence>{isActive && <NavItems />}</AnimatePresence>
-      </motion.div>
-      <Button
-        isActive={isActive}
-        toggleMenu={() => {
-          setIsActive(!isActive);
-        }}
-      />
-    </div>
+        Alex Steeves
+      </p>
+
+      <div className={styles.header}>
+        <motion.div
+          className={styles.menu}
+          variants={menu}
+          animate={isActive ? "open" : "closed"}
+          initial="closed"
+        >
+          <AnimatePresence>{isActive && <NavItems />}</AnimatePresence>
+        </motion.div>
+        <Button
+          isActive={isActive}
+          toggleMenu={() => {
+            setIsActive(!isActive);
+          }}
+        />
+      </div>
+    </>
   );
 }
