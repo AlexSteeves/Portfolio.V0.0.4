@@ -1,6 +1,4 @@
 "use client";
-
-
 import styles from "./style.module.scss";
 import Hero from "./components/Hero";
 import "./globals.css";
@@ -8,21 +6,22 @@ import { useEffect, useState, useRef } from "react";
 import { AnimatePresence } from "framer-motion";
 import About from "./components/About";
 import Preloader from "./components/PreLoader";
-
+import Lenis from "@studio-freight/lenis";
 import Footer from "./components/Footer";
-
-
-import Experience from './components/Experience'
-import Slider from './components/SharedComponents/Slider'
-import Projects from './components/Projects'
+import Experience from "./components/Experience";
+import Projects from "./components/Projects";
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     (async () => {
-      if (window.innerWidth > 768) { // Adjust 768px to your needs
-        const LocomotiveScroll = (await import('locomotive-scroll')).default;
-        const locomotiveScroll = new LocomotiveScroll();
+      if (window.innerWidth > 768) {
+        const lenis = new Lenis();
+        const raf = (time) => {
+          lenis.raf(time);
+          requestAnimationFrame(raf);
+        };
+        requestAnimationFrame(raf);
       }
 
       setTimeout(() => {
@@ -35,24 +34,18 @@ export default function Home() {
 
   return (
     <main className={styles.container}>
-      
- 
-    <AnimatePresence mode="wait">
+      <AnimatePresence mode="wait">
         {isLoading && <Preloader />}
       </AnimatePresence>
-      
-     
+
       <Hero />
-    
+
       <About />
-  
-      
+
       <Projects />
       <Experience />
-      
-      <Footer  />
-      
-  
+
+      <Footer />
     </main>
   );
 }
