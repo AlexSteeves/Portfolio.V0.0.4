@@ -52,7 +52,7 @@ body {
   padding: 0px;
 
   overflow-x: hidden;
-  overflow-y: scroll;
+  overflow-y: hidden;
 
   background-color: var(--background-color);
   animation: gradient 7s ease infinite;
