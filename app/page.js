@@ -13,6 +13,8 @@ import "lenis/dist/lenis.css";
 import { useScroll } from "framer-motion";
 import Slider from "./components/SharedComponents/Slider";
 
+import "./components/Hero/styles.css";
+
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
 
@@ -38,7 +40,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="relative" ref={container}>
+    <main className="relative gradient-animate" ref={container}>
       {/* <AnimatePresence mode="wait">
         {isLoading && <Preloader />}
       </AnimatePresence> */}

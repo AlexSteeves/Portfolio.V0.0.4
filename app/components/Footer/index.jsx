@@ -23,14 +23,17 @@ export default function Index() {
 
   return (
     <div ref={container}>
-      <svg className="w-full mb-28" viewBox="0 0 250 90">
+      <svg
+        className="w-full bg-cBackground py-12 lg:py-24"
+        viewBox="0 0 250 90"
+      >
         <path
           id="curve"
           fill="none"
           stroke="none"
           d="m0,88.5c61.37,0,61.5-68,126.5-68,58,0,51,68,123,68"
         />
-        <text className="text-[7px] uppercase " style={{ fill: "#F5F5F5" }}>
+        <text className="text-[7px] uppercase" style={{ fill: "#F5F5F5" }}>
           {[...Array(3)].map((_, i) => {
             return (
               <textPath
@@ -52,11 +55,11 @@ export default function Index() {
 const StickyBottom = () => {
   return (
     <div
-      className="bg-[#F5F5F5] h-[200px] relative"
+      className="bg-[#F5F5F5] h-[300px] relative"
       style={{ clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)" }}
     >
-      <div className="relative h-[calc(100vh+200px)] -top-[100vh]">
-        <div className="h-[200px] sticky top-[calc(100vh-200px)] flex justify-center flex-row gap-4 md:gap-8 xl:gap-16 items-center text-white">
+      <div className="relative h-[calc(100vh+300px)] -top-[100vh]">
+        <div className="h-[300px] sticky top-[calc(100vh-300px)] flex justify-center flex-row gap-4 md:gap-8 xl:gap-16 items-center text-white">
           <a target="_blank" href="https://github.com/AlexSteeves">
             <FaGithub className="h-10 w-10 hover:text-accent duration-300  text-cBackground " />
           </a>

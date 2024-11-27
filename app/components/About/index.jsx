@@ -1,5 +1,4 @@
 "use client";
-
 export default function AboutMe() {
   return (
     <div className="w-full py-[10vh] bg-[#F5F5F5] z-10 rounded-t-2xl">

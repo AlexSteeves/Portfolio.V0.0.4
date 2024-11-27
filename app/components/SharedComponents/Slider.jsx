@@ -11,7 +11,7 @@ export default function Slider({ text, direction, progress }) {
   );
 
   return (
-    <div className="overflow-hidden bg-[#0F413F]" r>
+    <div className="overflow-hidden bg-[#0F413F] py-[5vh]">
       <motion.div
         className="whitespace-nowrap flex relative left-[-40%]"
         style={{ x: translateX, willChange: "transform" }}
