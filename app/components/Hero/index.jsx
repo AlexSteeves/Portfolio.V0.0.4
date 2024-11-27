@@ -6,7 +6,7 @@ import "./styles.css";
 export default function Index() {
   return (
     <div
-      className="relative min-h-screen z-1 text-white mix-blend-difference"
+      className="relative h-screen z-1 text-white mix-blend-difference"
       style={{
         clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
       }}

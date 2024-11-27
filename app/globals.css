@@ -55,6 +55,10 @@ body {
   overflow-y: scroll;
 
   background-color: var(--background-color);
+  animation: gradient 7s ease infinite;
+  background: linear-gradient(45deg, #0f413f, #f5f5f5);
+  background-size: 400% 400%;
+
 }
 
 h1 {
@@ -96,4 +100,24 @@ h5 {
   margin: 0px;
   padding: 0px;
   font-weight: 300;
+}
+
+
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 25% 25%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 75% 75%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }

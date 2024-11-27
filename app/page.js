@@ -40,7 +40,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="relative gradient-animate" ref={container}>
+    <main className="relative" ref={container}>
       {/* <AnimatePresence mode="wait">
         {isLoading && <Preloader />}
       </AnimatePresence> */}
