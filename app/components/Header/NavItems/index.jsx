@@ -3,7 +3,7 @@ import { useRef } from "react";
 import { links } from "./data";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import Link from "next/link";
-import "./NavItems.scss";
+import "./NavItems.css";
 
 export default function index() {
   return (

@@ -5,10 +5,10 @@ import Header from "./components/Header";
 
 const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
-  title: "Portfolio",
+  title: "A/S PORTFOLIO",
   description: "Alexander Steeves Portfolio",
   icons: {
-    icon: ["../public/favicon.ico"],
+    icon: ["/public/favicon.ico"],
   },
 };
 
